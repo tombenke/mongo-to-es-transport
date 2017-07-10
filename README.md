@@ -13,7 +13,7 @@ and then continues with syncing the changes too.
     | mongodb |---->| transporter |---->| elasticsearch |
     +---------+     +-------------+     +---------------+
 
-See also the [mongo-bi]( "https://github.com/tombenke/mongo-bi") project as an example, how to use this image.
+See also the [mongo-bi](https://github.com/tombenke/mongo-bi) project as an example, how to use this image.
 
 ## Build
 
@@ -27,14 +27,17 @@ for further details on versions and platforms.
 
 Build the image with the default configuration:
 
+```bash
     docker build -t tombenke/mongo-to-es-transporter:latest .
+```
 
 Build the image with different versions and/or platforms:
 
+```bash
     export TRANSPORTER_VERSION=<version>
     export TRANSPORTER_VERSION=<platform>
     docker build -t tombenke/mongo-to-es-transporter:latest .
-
+```
 
 ## Run
 
@@ -49,7 +52,10 @@ The configuration parameters for run:
   Use one of the following formats: `http://<user>:password@host:port` or `http://host:port`.
   Default: `http://localhost:9200`.
 
+
+```bash
     docker run -it --rm tombenke/mongo-to-es-transporter:latest
+```
 
 
 ## References
